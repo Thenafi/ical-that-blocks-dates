@@ -1,0 +1,15 @@
+# Node pieces
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Wrangler pieces
+.wrangler/
+.dev.vars
+
+# OS pieces
+.DS_Store
+Thumbs.db
