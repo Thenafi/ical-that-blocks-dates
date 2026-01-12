@@ -14,6 +14,18 @@ Access the worker URL with optional query parameters:
 | :--- | :--- | :--- |
 | `days` | `45` | Number of days ahead of today to include in the calendar. |
 | `name` | `Special Ical Block` | The summary/title for each calendar event. |
+| `single` | `false` | If `true`, creates one continuous block instead of daily events. |
+
+### Multiple Events (Advanced)
+
+You can specify multiple configured events using the `events` query parameter with a JSON encoded string.
+
+`https://your-worker.subdomain.workers.dev/?events=[{"name":"Blocked","days":10},{"name":"LongEvent","days":5,"single":true}]`
+
+The `events` parameter expects a JSON array of objects, where each object can have:
+- `name`: (String) Event title
+- `days`: (Number) Duration in days
+- `single`: (Boolean) continuous vs daily blocks
 
 ## Development
 
